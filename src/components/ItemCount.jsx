@@ -23,8 +23,11 @@ const ItemCount = ({stock, initial}) =>{
     }
 
     const onAdd = () => {
-        alert(`Agregaste ${count} productos.`)
-    }
+        const message = `Agregaste ${count} produto`
+        //un valor ternario :  (condicional) ? (termina en true, haga esto) : (termina en false, haga esto)
+        count === 1 ? alert(message) : alert(`${message}s`)
+        };
+    
 
     
     console.log("soy el estado inicial del contador", count)   
