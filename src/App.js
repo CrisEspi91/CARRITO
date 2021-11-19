@@ -1,4 +1,3 @@
-import { Card } from '@mui/material';
 import './App.css';
 import RecipeReviewCard from './components/catalogo/cards/cards';
 import Catalogo from './components/catalogo/catalogo';
