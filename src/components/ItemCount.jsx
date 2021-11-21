@@ -1,37 +1,25 @@
 import { useState } from "react";
 
-const ItemCount = ({stock, initial}) =>{
-    // Voy a sumar hasta que el número sea menor o igual al stock
-    // Voy a restar hasta que el número sea mayor o igual al valor inicial
-    //Declaro el hoock para el contador
-    const[count, setCount] = useState(initial);
-    //Agregar función que suma para el boton + y para restar -
+
+const ItemCount = ({stock, initial, onAdd}) =>{
+    
+    const[count, setCount] = useState(initial)
+
     const addItem = () => {
         const newValue = count + 1;
         if(newValue <= stock){
             setCount(newValue);
         }
     }
-
     const quitItem = () => {
         const newValue = count - 1;
         if(newValue >= initial){
             setCount(newValue);
         }
-
-
     }
-
-    const onAdd = () => {
-        const message = `Agregaste ${count} produto`
-        //un valor ternario :  (condicional) ? (termina en true, haga esto) : (termina en false, haga esto)
-        count === 1 ? alert(message) : alert(`${message}s`)
-        };
     
 
-    
-    console.log("soy el estado inicial del contador", count)   
-
+    console.log("soy el estado inicial del contador", count)  
     return(
         <div>
             <h3>Contador</h3>
@@ -40,10 +28,8 @@ const ItemCount = ({stock, initial}) =>{
                 <h4>{count}</h4>
                 <button onClick={quitItem}>-</button>
             </div>
-            <button onClick={onAdd}>Agregar al carrito</button>
+            <button onClick={()=> onAdd(count)}>Agregar al carrito</button>
         </div>
-        
     )
 }
-
 export default ItemCount;
