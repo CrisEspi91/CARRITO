@@ -12,7 +12,8 @@ function App() {
       <Catalogo/>
       <RecipeReviewCard/>
       <FormContacto/>
-      <ItemListContainer greeting="¡Hola Usuario!"/>  
+      <ItemListContainer greeting="¡Hola Usuario!"/> 
+      
     </div>
   );
 }

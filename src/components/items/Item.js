@@ -1,29 +1,16 @@
-import React, { Component, useEffect, useState } from 'react';
+import { Title } from "@mui/icons-material";
 
-const [producto, setProductos] = useState([])
+const Item = ({title, price}) =>{
 
-
-useEffect(()=>{
-    let productos = [{
-            id: 1,
-            title: "Coaching Ontológico",
-            price: 5000
-        },
-        {
-            id: 2,
-            title: "Coaching Humanista",
-            price: 3500,
-        },
-        {
-            id: 3,
-            title: "Curso de Oratoria",
-            price: 5000,
-        }        
-    ]
-    setProductos(producto);
-},[]);
-
-export default useEffect;
+    return(
+        <div>
+            <h3>{title}</h3>
+            <h2>${price}</h2>
+        </div>
+        
+    )
+}
+export default Item;
 
 
 
